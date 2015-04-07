@@ -10,7 +10,6 @@ class TitleScreen
     ui.message(0, 0, messages[:title])
     ui.message(7, 1, messages[:by])
     handle_choice prompt
-    p options
   end
 
   private

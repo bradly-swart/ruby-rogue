@@ -1,4 +1,4 @@
-# Roles
+# role
 class Role
   def self.for_options(_)
     all
@@ -6,6 +6,7 @@ class Role
 
   def self.all
     DataLoader.load_file('roles').map do |data|
+      binding.pry
       new(data)
     end
   end
@@ -13,6 +14,7 @@ class Role
   attr_reader :name, :hotkey
 
   def initilialize(data)
+    binding.pry
     data.each do |key, value|
       instance_variable_set("@#{key}", value)
     end

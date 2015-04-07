@@ -12,6 +12,8 @@ class UI
   end
 
   def message(x, y, string)
+    x = x + cols if x < 0
+    y = y + lines if y < 0
     # positions the cursor - notice the order of the arguments!
     setpos(y, x)
     addstr(string) # prints a string at cursor position
@@ -24,5 +26,9 @@ class UI
       choice = getch
       return choice if choices.include?(choice)
     end
+  end
+
+  def clear
+    super # call curses clear method
   end
 end
