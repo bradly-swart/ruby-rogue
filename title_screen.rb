@@ -3,17 +3,19 @@ class TitleScreen
   def initialize(ui, options)
     @ui = ui
     @options = options
+    @messages = Messages
   end
 
   def render
-    ui.message(0, 0, 'Rhack, a NetHack clone')
-    ui.message(7, 1, 'by a daring developer')
+    ui.message(0, 0, messages[:title])
+    ui.message(7, 1, messages[:by])
     handle_choice prompt
+    p options
   end
 
   private
 
-  attr_reader :ui, :options
+  attr_reader :ui, :options, :messages
 
   def prompt
     ui.choice_prompt(0, 3, messages[:pick_random], 'ynq')
