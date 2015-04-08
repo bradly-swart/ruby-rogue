@@ -40,7 +40,6 @@ class Game
 
   def get_traits
     TRAITS.each do |trait|
-      binding.pry
       SelectionScreen.new(trait, ui, options).render
       quit?
     end

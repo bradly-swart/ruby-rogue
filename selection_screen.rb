@@ -1,7 +1,6 @@
 # role selection
 class SelectionScreen
   def initialize(trait, ui, options)
-    binding.pry
     @items    = trait.for_options(options)
     @ui       = ui
     @options  = options
