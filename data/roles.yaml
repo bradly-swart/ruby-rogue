@@ -1,27 +1,66 @@
 ---
 - name: Archeologist
   hotkey: a
+  races: hdg
+  genders: mf
+  alignments: ln
 - name: Barbarian
   hotkey: b
+  races: ho
+  genders: mf
+  alignments: nc
 - name: Caveman
   hotkey: d
+  races: hdg
+  genders: mf
+  alignments: ln
 - name: Healer
   hotkey: h
+  races: hg
+  genders: mf
+  alignments: n
 - name: Knight
   hotkey: k
+  races: h
+  genders: mf
+  alignments: l
 - name: Monk
   hotkey: m
+  races: h
+  genders: mf
+  alignments: lnc
 - name: Priest
   hotkey: p
+  races: he
+  genders: mf
+  alignments: lnc
 - name: Rogue
   hotkey: r
+  races: ho
+  genders: mf
+  alignments: c
 - name: Ranger
   hotkey: R
+  races: hego
+  genders: mf
+  alignments: nc
 - name: Samurai
   hotkey: s
+  races: h
+  genders: mf
+  alignments: l
 - name: Tourist
   hotkey: t
+  races: h
+  genders: mf
+  alignments: n
 - name: Valkyrie
   hotkey: v
+  races: hd
+  genders: f
+  alignments: ln
 - name: Wizard
   hotkey: w
+  races: hego
+  genders: mf
+  alignments: nc

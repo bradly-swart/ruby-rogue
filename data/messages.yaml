@@ -5,3 +5,12 @@ pick_random: "Shall I pick a characters's race, role, gender and alignment for y
 role:
   choosing: Choosing Role
   instructions: Pick a role for your character
+race:
+  choosing: Choosing Race
+  instructions: Pick the race of your %role
+gender:
+  choosing: Choosing Gender
+  instructions: Pick the gender of your %race %role
+alignment:
+  choosing: Choosing Alignment
+  instructions: Pick the alignment of your %gender %race %role

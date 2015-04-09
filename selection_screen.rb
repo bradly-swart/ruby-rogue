@@ -21,7 +21,7 @@ class SelectionScreen
   attr_reader :items, :ui, :options, :key, :messages
 
   def random?
-    options[:randall]
+    options[:randall] || items.length == 1
   end
 
   def random_item
@@ -36,8 +36,12 @@ class SelectionScreen
     handle_choice prompt
   end
 
+  def interpolate(message)
+    message.gsub(/%(\w+)/) { options[$1.to_sym] }
+  end
+
   def instructions
-    messages[:instructions]
+    @instructions ||= interpolate(messages[:instructions])
   end
 
   def right_offset
@@ -53,7 +57,7 @@ class SelectionScreen
     ui.message(right_offset, items.length + 2, 'q - Quit')
   end
 
-  def handl_choices(choice)
+  def handle_choice(choice)
     case choice
     when 'q' then options[:quit]
     when '*' then options[key] = random_item
