@@ -36,6 +36,14 @@ class Game
 
   def setup_character
     get_traits
+    options[:player] = make_player
+  end
+
+  def make_player
+    Player.new(options).tap do
+      %i(role race gender alignment).each do |key|
+        options.delete(key)
+      end
   end
 
   def get_traits

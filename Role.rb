@@ -10,7 +10,15 @@ class Role
     end
   end
 
-  attr_reader :name, :hotkey, :races, :genders, :alignments
+  attr_reader :name,
+              :hotkey,
+              :races,
+              :genders,
+              :alignments,
+              :starting_attributes,
+              :attribute_probabilities,
+              :hitpoints,
+              :power
 
   def initialize(data)
     data.each do |key, value|
